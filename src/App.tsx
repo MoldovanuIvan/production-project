@@ -5,11 +5,12 @@ import {Suspense} from "react";
 import MainAsync from "./pages/Main/Main.async";
 import AboutAsync from "./pages/About/About.async";
 import useTheme from "./theme/useTheme";
+import {classNames} from "./helpers/classNames/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme()
 
-    return <div className={`app ${theme}`}>
+    return <div className={classNames('app', {}, [theme])}>
         <button onClick={toggleTheme}>toggleTheme</button>
         <Link to={'/'}>Main</Link>
         <Link to={'/about'}>About</Link>

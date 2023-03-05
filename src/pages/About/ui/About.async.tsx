@@ -1,8 +1,8 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
 const AboutAsync = lazy(() => new Promise((resolve) => {
-    //@ts-ignore
-    setTimeout(() => resolve(import('./About')), 1500)
-}))
+    // @ts-ignore
+    setTimeout(() => resolve(import('./About')), 1500);
+}));
 
-export default AboutAsync
+export default AboutAsync;
